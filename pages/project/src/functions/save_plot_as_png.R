@@ -16,32 +16,33 @@
 
 ################################################################################
 # Load necessary libraries/source any function directories
-library(ggplot2)
-library(ragg)
+require(here)
+require(ggplot2)
+require(ragg)
 
 ################################################################################
 # function to save plot as png
 
 save_plot_as_png <- function(
-  plot = get_last_plot(),
-  user_name,
+  user_name = "project",
   file_name,
-  device = ragg::agg_png, # uses ragg
+  plot = get_last_plot(),
+  device = ragg::agg_png, # uses ragg device
   scale = 1,
-  width = 7,
-  height = 4.5,
-  units = "in",
+  width = 7, # 1600
+  height = 4.5, # 1100
+  units = "in", # "px"
   dpi = 300,
   limitsize = TRUE,
   bg = NULL,
-  create.dir = FALSE
+  create.dir = TRUE
 ) {
   ggsave(
-    plot = plot,
     filename = paste0(file_name),
+    plot = plot,
     path = here::here("pages", user_name, "figs"),
     device = device,
-    scale = 1,
+    scale = scale,
     width = width,
     height = height,
     units = units,

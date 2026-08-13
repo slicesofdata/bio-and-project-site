@@ -9,7 +9,6 @@ project:
     - "now.qmd"    # now page
     - "pages/"     # page files
     - "!posts/"    # don't render blog posts
-    
     #- "!pages/"   # to NOT render pages in this dir
     #- "**/*.qmd"  # to render all pages
   
@@ -21,13 +20,13 @@ website:
   #site-url: https://yoursite.com   # needed for rss feed
   #description: ""                  # optional
 
-  #google-analytics: <Insert your ID here> # if you colelct google data
+  #google-analytics: <Insert your ID here> # if you collect google data
   #cookie-consent: true             # if you are collecting cookies
   navbar:
     left: # left side of navbar
-      - href: index.qmd             # index/home page
-      
+      - href: index.qmd               # index/home page
         text: "My Name or Site Title" # home page title (instead of title:)
+      
       - href: now.qmd               # my now page
         text: Now                   # now page title
       
@@ -47,7 +46,7 @@ website:
       - text: "Project Title w/DD"       # page text
         menu: 
           - pages/project/page01.qmd     # the first page
-#          - pages/othername.qmd    # the second page
+      # - pages/othername.qmd    # the second page
 
 
     right: # right side of navbar 
@@ -69,6 +68,6 @@ format:
       light: 
         - cosmo                 # base theme 
         - styles/custom.scss    # custom scss
-      dark: 
-        - cosmo                 # base theme 
-        - styles/custom.scss    # Same file, uses [data-theme="dark"]
+      #dark: 
+      #  - cosmo                 # base theme 
+      #  - styles/custom.scss    # Same file, uses [data-theme="dark"]
