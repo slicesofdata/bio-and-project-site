@@ -62,7 +62,6 @@ p <-
 # save the plot as a .png file using the save_plot_as_png()
 save_plot_as_png(
   plot = p,
-  user_name = "project",
   file_name = "mpg-by-hp.png"
 )
 ```
